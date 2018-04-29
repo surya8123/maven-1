@@ -15,7 +15,7 @@ try {
        }
     }
    stage('Deploy') {
-        sh "/bin/cp -f $WORKSPACE/Build-${env.BUILD_NUMBER}/sspWebApp_${env.BRANCH_NAME}${env.BUILD_NUMBER}.war /opt/apache-tomcat-9.0.7/webapps/"
+        sh "/bin/cp -f $WORKSPACE/Build-${env.BUILD_NUMBER}/sspWebApp_${env.BRANCH_NAME}${env.BUILD_NUMBER}.war /opt/apache-tomcat-9.0.7/webapps/sspWebApp.war"
     }
   
    delivery.artifactory()
